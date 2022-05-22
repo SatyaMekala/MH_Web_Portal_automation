@@ -6,7 +6,7 @@ Meta:
 
 	@Epic PT-170[PT-183]
 	@group smoketest	
-	@layout desktop chrome_phone
+	@layout desktop chrome_phone mobile
 	@SmokeTest
 	@Priority 1
 		

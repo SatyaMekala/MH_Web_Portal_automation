@@ -11,7 +11,7 @@ Meta:
 	@Priority 1
 
 Given I am on the main application page
-When I wait until the page has the title 'React App'
+When I wait until element located `By.xpath(//h1[text()='Sign In'])` contains text 'Sign In'
 When I enter `<empName>` in field located `By.xpath(//input[@name='username'])`
 When I enter `<empPwd>` in field located `By.xpath(//input[@name='password'])`
 When I click on element located `By.xpath(//button[text()='Sign In'])`
@@ -21,5 +21,5 @@ Then the text '<text>' exists
 
 Examples:
 |empName	|empPwd		|text				|
-|eemployee1	|Default1	|Employee1 React	|
+|remployee1	|Default1	|Employee1 React	|
 
