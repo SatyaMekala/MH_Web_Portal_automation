@@ -12,15 +12,15 @@ Meta:
 Scenario: Scenario: [Desktop][Articles] FAQ
 
 When I click on element located `By.buttonName(Help)`
-When I wait `PT10S` with `PT05S` polling until element located `By.xpath(//ul/li[2][text()='FAQ'][@role='menuitem'])` becomes VISIBLE
-When I click on element located `By.xpath(//ul/li[2][text()='FAQ'][@role='menuitem'])`
-When I wait `PT10S` with `PT05S` polling until element located `By.xpath(//h1[text()='Frequently Asked Questions'])` becomes VISIBLE
+When I wait `PT10S` with `PT05S` polling until element located `${xpathFor_menuFAQ}` becomes VISIBLE
+When I click on element located `${xpathFor_menuFAQ}`
+When I wait `PT10S` with `PT05S` polling until element located `${xpathFor_headingFAQ}` becomes VISIBLE
 When I wait `PT10S` with `PT05S` polling until element located `By.linkText(Home)` becomes VISIBLE
-When I wait until element located `By.xpath(//li[@class='MuiBreadcrumbs-li']/p[text()='Frequently Asked Questions'])` appears
-When I wait until an element with the tag 'img' and attribute 'alt'='Frequently Asked Questions' appears
-When I wait `PT10S` with `PT05S` polling until element located `By.xpath(//h1[text()='Frequently Asked Questions'])` becomes VISIBLE
-Then the text 'answered some our most frequently asked questions' exists
-When I click on element located `By.xpath(//h1[text()='Marathon Health Overview'])`
-Then the text 'Who are the providers for Marathon Health?' exists
-When I click on element located `By.xpath(//h1[text()='Marathon Health Overview'])`
-Then the text 'Who are the providers for Marathon Health?' does not exist
+When I wait until element located `${xpathFor_breadcrumbFAQ}` appears
+When I wait until an element with the tag 'img' and attribute 'alt'='${textFAQ}' appears
+When I wait `PT10S` with `PT05S` polling until element located `${xpathFor_headingFAQ}` becomes VISIBLE
+Then the text '${textAnsweredSomeFAQs}' exists
+When I click on element located `${xpathFor_textMarathonHealth}`
+Then the text '${textwhoAreTheProvForMH}' exists
+When I click on element located `${xpathFor_textMarathonHealth}`
+Then the text '${textwhoAreTheProvForMH}' does not exist
