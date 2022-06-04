@@ -4,22 +4,16 @@ Scenario: [Desktop][Login] Successful login
 
 Meta:
 
-	@Epic PT-170[Jira-183]
+	@Epic PT-170[Jira-184]
 	@group smoketest	
 	@layout desktop
-	@SmokeTest
+	@login
 	@Priority 1
 
 Given I am on the main application page
-When I wait until element located `By.xpath(//h1[text()='Sign In'])` contains text 'Sign In'
-When I enter `<empName>` in field located `By.xpath(//input[@name='username'])`
-When I enter `<empPwd>` in field located `By.xpath(//input[@name='password'])`
-When I click on element located `By.xpath(//button[text()='Sign In'])`
-When I wait `PT10S` with `PT05S` polling until element located `By.xpath(//button[text()='Home'])` becomes VISIBLE
-When I wait until element located `By.xpath(//button[@id='profile-button'])` contains text '<text>'
-Then the text '<text>' exists
-
-Examples:
-|empName	|empPwd		|text				|
-|remployee1	|Default1	|Employee1 React	|
-
+When I wait until element located `${xpathFor_signInHeader}` contains text '${text_SignIn}'
+When I enter `${userName}` in field located `${userNameXpath}`
+When I enter `${userPwd}` in field located `${pwdXpath}`
+When I click on element located `${xpathFor_signInButton}`
+When I wait `PT10S` with `PT05S` polling until element located `${xpathFor_homeButton}` becomes VISIBLE
+When I wait until element located `${xpathFor_userProfileButton}` contains text '${text_userName}'
