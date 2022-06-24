@@ -48,15 +48,12 @@ When I wait `PT10S` with `PT05S` polling until element located `${xpathFor_recor
 When I wait `PT10S` with `PT05S` polling until element located `${xpathFor_mobRecordedOnBySelf}` becomes VISIBLE
 When I wait `PT10S` with `PT05S` polling until element located `${xpathFor_editIconInRecentlyRecordedSteps}` becomes VISIBLE
 When I click on element located `${xpathFor_editIconInRecentlyRecordedSteps}`
-Then an alert is present
 When I wait `PT10S` with `PT05S` polling until element located `${xpathFor_durationHours}` becomes VISIBLE
 When I enter `5` in field located `${xpathFor_durationHours}`
 When I click on element located `${xpathFor_cancelButtonInRecordsSteps}`
-When I wait until an alert disappears
 When I wait `PT10S` with `PT05S` polling until element located `${xpathFor_mostRecentEntryInFitnessSection}` becomes VISIBLE
 When I wait `PT10S` with `PT05S` polling until element located `${xpathFor_editIconInRecentlyRecordedSteps}` becomes VISIBLE
 When I click on element located `${xpathFor_editIconInRecentlyRecordedSteps}`
-Then an alert is present
 When I wait `PT10S` with `PT05S` polling until element located `${xpathFor_durationHours}` becomes VISIBLE
 When I enter `3` in field located `${xpathFor_durationHours}`
 When I click on element located `${xpathFor_recordFitnessActivityButtonInPopup}`
